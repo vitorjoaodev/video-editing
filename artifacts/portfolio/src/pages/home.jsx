@@ -164,12 +164,36 @@ function HeroSection({ onContactOpen }) {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed font-light"
+          className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed font-light"
         >
           Transformo footage bruta em narrativas visuais de alto impacto.
           <br className="hidden sm:block" />
           <span className="text-foreground/80 font-medium mt-2 inline-block">Davy Jones · Flow Podcast · Flow Games</span>
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="flex items-center justify-center gap-6 mb-10"
+        >
+          <span className="text-[10px] tracking-[0.25em] uppercase text-muted-foreground/50 font-medium">Presente em</span>
+          <div className="h-px w-8 bg-white/10" />
+          <div className="flex items-center gap-5">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/8 bg-white/5 backdrop-blur-sm">
+              <Youtube className="h-4 w-4" style={{ color: "#FF0000" }} />
+              <span className="text-xs text-muted-foreground font-medium">YouTube</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/8 bg-white/5 backdrop-blur-sm">
+              <TikTokIcon className="h-4 w-4 text-white" />
+              <span className="text-xs text-muted-foreground font-medium">TikTok</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/8 bg-white/5 backdrop-blur-sm">
+              <Instagram className="h-4 w-4" style={{ color: "#E1306C" }} />
+              <span className="text-xs text-muted-foreground font-medium">Instagram</span>
+            </div>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -601,7 +625,6 @@ export default function Home() {
         <HeroSection onContactOpen={() => setContactOpen(true)} />
         <StatsBar />
         <AboutSection />
-        <ClientsSection />
         <PortfolioSection />
         <ServicesSection />
         <ContactSection onContactOpen={() => setContactOpen(true)} />
